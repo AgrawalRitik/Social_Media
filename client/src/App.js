@@ -12,6 +12,10 @@ function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   const isAuth = Boolean(useSelector((state) => state.token));
+  //const baseUrl = process.env.REACT_APP_BASE_URL
+ // const baseport = process.env.PORT;
+  //console.log("Baseport",baseport);
+  console.log("MONGO URL",process.env.REACT_APP_BASE_URL);
 
   return (
     <div className="app">
